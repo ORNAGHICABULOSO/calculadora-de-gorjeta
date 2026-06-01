@@ -36,6 +36,13 @@ main {
     border-radius: 1.5625rem 1.5625rem 0 0;
 }
 
+.gorjeta-total,
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .conta,
 .gorjeta,
 .pessoas {
@@ -54,7 +61,7 @@ main {
 .pessoas .input-box{
     margin-top: 0.4rem;
     background-color: var(--green-100);
-    padding: 0,4rem 1.2rem;
+    padding: 0.4rem 1.2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -76,13 +83,12 @@ main {
 .conta input::placeholder,
 .pessoas input::placeholder {
     color: var(--green-300);
-
 }
 
-.conta:has(input.focus) div,
-.conta:has(input.hover) div,
-.pessoas:has(input.focus) .input-box,
-.pessoas:has(input.hover) .input-box,
+.conta:has(input:focus) div,
+.conta:has(input:hover) div,
+.pessoas:has(input:focus) .input-box,
+.pessoas:has(input:hover) .input-box,
 .gorjeta #outra:focus,
 .gorjeta #outras:hover {
     outline: 2px solid var(--light-green);
@@ -121,7 +127,7 @@ main {
     color: var(--green-500);
 }
 
-.gorjeta #outra ::placeholder {
+.gorjeta #outra::placeholder {
     color: var(--green-300);
 }
 
@@ -139,6 +145,7 @@ main {
     font-size: 0.75rem;
     color: var(--danger);
     font-weight: 700;
+    display: none;
 }
 
 .resultados {
@@ -170,7 +177,7 @@ main {
 }
 
 .resultados .gorjeta-total {
-    margin-bottom: 1..25rem;
+    margin-bottom: 1.25rem;
 }
 
 .resultados .total {
@@ -227,7 +234,7 @@ main {
     .resultados {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: flex;
     }
 
     .resultados div > strong {
